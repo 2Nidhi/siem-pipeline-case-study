@@ -1,26 +1,5 @@
-**Shri Ramswaroop Memorial University,**   
-**Barabanki, Lucknow**  
-![][image1]
-
-**Case Study: End-to-End SIEM Pipeline—Detecting and Responding**  
- **to Attacks Using Splunk and ELK Stack**
-
-**B.Tech (Computer Science, Cybersecurity Specialization),**  
- **Department of Computer Science**
-
-**Submitted to:**  
- Santanu Sasmal
-
-**Submitted by:**   
-Nidhi Rai  
-Roll no. 202210101180019  
-Date  
-11/17/2025
-
-**Project Focus**  
-Cybersecurity, Security Operations (SOC), Data Analytics, Log Management  
-**Keywords**  
-SIEM, Splunk, ELK Stack, Threat Detection, Correlation, Logstash, SPL, SOAR
+**Case Study**
+**End-to-End SIEM Pipeline: Detecting and Responding to Attacks Using Splunk and ELK Stack**
 
 **Abstract**  
 A **Security Information and Event Management (SIEM) system** is a critical cornerstone for bolstering digital resilience and achieving **unified security** in modern enterprises. This project details the design, implementation, and comparison of an **End-to-End SIEM Pipeline** using the proprietary **Splunk Enterprise Security** and the open-source **ELK Stack (Elasticsearch, Logstash, Kibana)**. The goal was to establish a scalable log analysis platform capable of overcoming challenges related to **large volumes of logs** and the **difficulty in correlating events across diverse systems**.
@@ -28,16 +7,6 @@ A **Security Information and Event Management (SIEM) system** is a critical corn
 A hands-on lab environment was established to simulate real-world cyberattacks, including **Nmap scans, brute-force attempts, SQL injections, and Metasploit exploitation**, replicating an SOC analyst workflow. The methodology focused on architecting a complete log flow, covering collection (via **Splunk Forwarders/Beats**), processing (via **Logstash**), indexing (via **Elasticsearch/Splunk Indexer**), and visualization (via **Kibana/Splunk Dashboards**).
 
 Custom detection logic, utilizing **Search Processing Language (SPL)** and specialized filtering, successfully identified all simulated threats, providing **real-time event monitoring**. Comparative analysis reveals that **Splunk Enterprise Security** has a higher Analyst Rating (**93**) and excels in **UEBA** and user-friendly dashboards, while the **ELK Stack** (Analyst Rating **82**) is praised by users (90% 'excellent' sentiment) for its **scalability** and **cost-effectiveness** due to its open-source core. The project concludes that both platforms enable proactive defense, with future enhancements recommending **SOAR integration** for automated response.
-
-**INDEX**
-
-**1\. Introduction ………………………………………………………………. 1**  
-**2\. Methodology and Technical Implementation ………………………..2**  
-**3\. Technical Implementation and Code Examples …………………….4**  
-**4\. Results: Real-Life Threat Detection and Advanced Use Cases…..7**   
-**5\. Comparative Analysis and Findings …………………………………..9**  
-**6\. Conclusion and Future Work …………………………………………..11**  
-**7\. References ……………………………………………………………….. 12**
 
 **1\. Introduction**
 
@@ -52,6 +21,8 @@ Effective cybersecurity is challenged by the lack of **real-time detection of at
 • **Correlation Difficulty:** It is challenging to correlate events across systems to identify multi-stage attack campaigns.  
 • **Delayed Visibility:** Security compromise often progresses until damage occurs because of a lack of visibility into suspicious activity.  
 The project addresses the need for a scalable pipeline that can efficiently normalize logs and rapidly detect common attack patterns, strengthening the overall security posture.
+
+
 
 **2\. Methodology and Technical Implementation**
 
@@ -74,6 +45,8 @@ The project configured custom alerts to detect simulated attacks, which included
 2\. **Brute-Force Attacks** (John the Ripper) and **Repeated Failed Logins**.  
 3\. **SQL injection attempts**.  
 4\. **Metasploit Exploitation** (reverse shell attempts and privilege escalation).
+
+
 
 **3\. Technical Implementation and Code Examples**
 
@@ -153,6 +126,8 @@ This Python snippet demonstrates the logic used to transform raw threat intellig
     *processed\_threat\_intelligence\_data.append(processed\_threat\_intelligence)*  
 *\# The resulting processed data is ready for indexing in Elasticsearch \[43\].*
 
+
+
 **4\. Results: Real-Life Threat Detection and Advanced Use Cases**
 
 The pipeline demonstrated successful detection of basic threats (brute force, port scan) and was validated against high-level, real-world SIEM use cases.
@@ -184,6 +159,8 @@ Modern SIEMs track user behavior to identify anomalies, often leveraging **UEBA 
 • **SIEM Action:** The SIEM detects a user who typically accesses systems during business hours from a local IP now **accessing a critical finance server at 3 a.m. from a foreign IP**. This deviation triggers a medium-severity alert.  
 • **Business Value:** Enables **detection of suspicious user behavior patterns** and provides an early warning for compromised credentials.
 
+
+
 **5\. Comparative Analysis and Findings**
 
 The comparison highlights the primary differences between the two leading SIEM platforms.
@@ -210,6 +187,8 @@ The sources confirm that both platforms are powerful, enterprise-grade log manag
 
 • **ELK Weaknesses:** The **complex initial setup** and configuration can be challenging, requiring dedicated expertise. Although the software is free, the **total cost of ownership (TCO) can be substantial** due to hardware and storage requirements for expansive infrastructures.
 
+
+
 **6\. Conclusion and Future Work**
 
 **6.1 Conclusion**
@@ -226,6 +205,8 @@ Future iterations of this SIEM project should focus on enhancing **automation** 
 1\. **SOAR Integration:** Integrate the SIEM with **SOAR** technology (supported natively by Splunk and fully supported by Elastic) to **automatically execute playbooks** in response to high-severity alerts (e.g., blocking an IP detected in a port scan or isolating a host upon ransomware detection).  
 2\. **Expanded Endpoint Detection:** Integrate dedicated **Endpoint Detection and Response (EDR) telemetry** to allow the SIEM to correlate endpoint behavior (like suspicious PowerShell processes) with broader network and authentication data, improving alert confidence.  
 3\. **Advanced Alerting:** For the ELK Stack, automate detection rules using tools like **ElastAlert**.
+
+
 
 **7\. References**  
 **• ELK Documentation: [Elastic.co/docs](http://Elastic.co/docs).**  
